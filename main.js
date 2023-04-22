@@ -3,6 +3,47 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+6 - Sort the odd
+*/
+function sortArray(arr) {
+  let oddIndexes = []
+  //indexes refering to only the odd number indexes
+  //learn the modulus of negative numbers
+  let oddArr = arr.filter((num, i) => (num % 2 == 1 || num % 2 == -1) && oddIndexes.push(i))
+
+
+  //sort the odd numbers
+  //learned arr.sort() doesnt automatically sort in ascending order
+  oddArr = oddArr.sort((a,b) => a-b)
+
+
+  //delete odd number indexes from arr
+  for (i of oddIndexes) {
+    delete arr[i]
+  }
+
+
+  //place odd numbers back into the empty index
+  for (let i = 0; i < oddIndexes.length; i++) {
+    arr[oddIndexes[i]] = oddArr[i]
+  }
+  return arr
+}
+
+// let ans = sortArray([1,2,3,4,5,6,7,-1,-2,-3,-4,-5,-6,-7])
+// console.log(ans)
+
+
+
+
+
+
+
+
+
+
+
+/*
 6 - Consecutive strings
 */
 function longestConsec(strarr, k) {
@@ -35,5 +76,4 @@ slice 2, 6
     
   
 }
-
-console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2))
+//console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2))
