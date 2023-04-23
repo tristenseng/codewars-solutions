@@ -3,6 +3,39 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+6 - Find the odd int
+*/
+function findOdd(A) {
+  counter = {}
+  for (let k of A) {
+    console.log(k)
+    if (!Object.keys(counter).includes(k)) {
+      counter[k] = 1
+      console.log('first time')
+    }
+    else {
+      console.log('not first')
+      counter[k] += 1
+    }
+  }
+
+
+  for (let key in counter) {
+    if (counter[key] % 2 == 1){
+
+      return Number(key)
+    }
+  }
+}
+
+//return integer that shows up an odd amount of times
+let arr = [1,2,2,3,3,3,4,3,3,3,2,2,1]
+findOdd(arr)
+
+
+
+
+/*
 6 - Sort the odd
 */
 function sortArray(arr) {
@@ -32,10 +65,6 @@ function sortArray(arr) {
 
 // let ans = sortArray([1,2,3,4,5,6,7,-1,-2,-3,-4,-5,-6,-7])
 // console.log(ans)
-
-
-
-
 
 
 
