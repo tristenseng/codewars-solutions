@@ -7,6 +7,10 @@ KYU RANK - CHALLENGE NAME
 */
 
 function findOdd(A) {
+
+  //iterate through A array to add keys : values to counter dictionary
+  //keys being the numbers in A array
+  //values being how many times they show up
   let counter = {}
   for (let prop of A) {
     if (counter.hasOwnProperty(prop)) {
@@ -16,13 +20,15 @@ function findOdd(A) {
       counter[prop] = 1
     }
   }
-  
+
+
+  //iterate through counter and find the first odd value
+  //return the odd value
   for (let key of Object.keys(counter)) {
     if (counter[key] % 2 == 1) {
       return Number(key)
     }
   }
-
 }
 console.log(findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1]))
 
