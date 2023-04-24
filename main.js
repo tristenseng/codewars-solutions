@@ -5,34 +5,26 @@ KYU RANK - CHALLENGE NAME
 /*
 6 - Find the odd int
 */
+
 function findOdd(A) {
-  counter = {}
-  for (let k of A) {
-    console.log(k)
-    if (!Object.keys(counter).includes(k)) {
-      counter[k] = 1
-      console.log('first time')
+  let counter = {}
+  for (let prop of A) {
+    if (counter.hasOwnProperty(prop)) {
+        counter[prop] += 1
     }
     else {
-      console.log('not first')
-      counter[k] += 1
+      counter[prop] = 1
     }
   }
-
-
-  for (let key in counter) {
-    if (counter[key] % 2 == 1){
-
+  
+  for (let key of Object.keys(counter)) {
+    if (counter[key] % 2 == 1) {
       return Number(key)
     }
   }
+
 }
-
-//return integer that shows up an odd amount of times
-let arr = [1,2,2,3,3,3,4,3,3,3,2,2,1]
-findOdd(arr)
-
-
+console.log(findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1]))
 
 
 /*
