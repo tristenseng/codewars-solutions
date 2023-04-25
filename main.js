@@ -10,6 +10,46 @@ KYU RANK - CHALLENGE NAME
 
 
 
+/*
+6 - Who likes it?
+*/
+//create a like system.
+//given an array of names
+//return these string statements indicating amount of likes
+//possibly refactor
+function likes(names) {
+  nameStr = " like this"
+  //if no names returned
+  if(names.length == 0) {
+    return "no one likes this"
+  }
+  //if 1 name returned
+  else if(names.length == 1) {
+    return `${names[0]} likes this`
+  }
+  //if 2 names returned
+  else if(names.length == 2){
+    return `${names[0]} and ${names[1]}`.concat(nameStr)
+  }
+  //if 3 names returned
+  else if(names.length == 3) {
+    return `${names[0]}, ${names[1]} and ${names[2]} like this`
+  }
+  //if >3 names returned
+  else {
+    let num = names.length-2
+    return `${names[0]}, ${names[1]} and ${num} others like this`
+  }
+}
+
+
+
+
+
+
+
+
+
 
 /*
 8 - Beginner Series #4 Cockroach
