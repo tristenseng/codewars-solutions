@@ -2,6 +2,25 @@
 KYU RANK - CHALLENGE NAME
 */
 
+/*
+6 - Stop gninnipS My sdroW!
+*/
+//given a string
+//return a string with all words of length 5 or more, reversed
+function spinWords(string){
+  //split string into array of all the words
+  let wordArr = string.split(" ")
+  //iterate through array and search for words with length 5 or more
+  //if a word has length 5 or more then reverse it
+  for (i in wordArr) {
+    if (wordArr[i].length >= 5) {
+      wordArr[i] = wordArr[i].split("").reverse().join("")
+    }
+  }
+  return wordArr.join().replaceAll(","," ")
+}
+//console.log(spinWords("Welcome to the land of milk and honey"))
+
 
 
 
@@ -41,6 +60,7 @@ function likes(names) {
     return `${names[0]}, ${names[1]} and ${num} others like this`
   }
 }
+//console.log(likes(['bob','jim','jerry','goenka']))
 
 
 
@@ -63,7 +83,7 @@ function cockroachSpeed(s) {
   return Math.floor(s*(250/9))
 }
 //returns 30
-console.log(1.08)
+//console.log(1.08)
 
 
 
@@ -104,7 +124,7 @@ function findOdd(A) {
     }
   }
 }
-console.log(findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1]))
+//console.log(findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1]))
 
 
 
