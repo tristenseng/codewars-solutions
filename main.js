@@ -3,6 +3,30 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+7 - Flatten and sort an array
+*/
+//given a 2d array
+//return 'flattened' array (1d) in ascending order
+//return empty array if empty
+function flattenAndSort(array) {
+  //join array
+  //split into 1d array w individual numbers
+  //sort that array
+  let arr = array.join().split(',').sort((a,b) => a-b)
+  //filter array to remove empty strings
+  //turn each string element into integer
+  return arr.filter(val => val != "").map(val => Number(val))
+}
+flattenAndSort([[1, 3, 5], [100], [2, 4, 6]])
+
+
+
+
+
+
+
+
+/*
 6 - Stop gninnipS My sdroW!
 */
 //given a string
