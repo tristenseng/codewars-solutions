@@ -2,6 +2,23 @@
 KYU RANK - CHALLENGE NAME
 */
 
+
+/*
+7 - Sum of odd numbers
+*/
+//given a triangle of consecutive odd numbers
+//calculate the sum of the numbers in the nth row of the triangle
+//return sum
+//n=1 ; ans=1
+//n=2 ; ans=8
+//n=3 ; ans=27
+//n^3
+function rowSumOddNumbers(n) {
+  return Math.pow(n,3)
+}
+
+
+
 /*
 7 - Flatten and sort an array
 */
