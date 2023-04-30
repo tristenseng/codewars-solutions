@@ -12,13 +12,10 @@ KYU RANK - CHALLENGE NAME
 function narcissistic(number) {
   //convert number to string
   number = String(number)
-  
   //convert string to array
   let narcNum = Array.from(number)
-
-  //reduce method on the array of elements Number(string)
   narcNum = narcNum.reduce((iter, val) => Math.pow(Number(val),number.length)+Number(iter),0)
-
+  //reduce method on the array of elements Number(string)
   //return bool value with if statement
   if (number == narcNum) {
     return true
