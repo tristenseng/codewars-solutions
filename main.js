@@ -2,6 +2,33 @@
 KYU RANK - CHALLENGE NAME
 */
 
+/*
+6 - Does my number look big in this?
+*/
+//An Armstrong number is a positive number which is the sum of its own
+//digits, each digit raise to the power of the number of digits in the
+//number
+//return true if the argument passed in is an Armstrong number
+function narcissistic(number) {
+  //convert number to string
+  number = String(number)
+  
+  //convert string to array
+  let narcNum = Array.from(number)
+
+  //reduce method on the array of elements Number(string)
+  narcNum = narcNum.reduce((iter, val) => Math.pow(Number(val),number.length)+Number(iter),0)
+
+  //return bool value with if statement
+  if (number == narcNum) {
+    return true
+  }
+  return false
+}
+console.log(narcissistic(153));
+
+
+
 
 /*
 6 - Multiples of 3 or 5
@@ -30,7 +57,7 @@ function solution(n){
   }
   
 }
-console.log(solution(10))
+//console.log(solution(10))
 
 
 
