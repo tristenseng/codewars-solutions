@@ -3,6 +3,34 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - Reversed Strings
+*/
+//return the argument passed in, in reverse order
+function reversedString(str) {
+  let strArr = Array.from(str)
+  console.log(strArr)
+  let reversed = []
+  for (let i = strArr.length-1; i >= 0; i--) {
+    reversed.push(strArr[i])
+  }
+  return reversed.join('')
+
+}
+console.log(reversedString('world'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 6 - Does my number look big in this?
 */
 //An Armstrong number is a positive number which is the sum of its own
@@ -22,7 +50,7 @@ function narcissistic(number) {
   }
   return false
 }
-console.log(narcissistic(153));
+//console.log(narcissistic(153));
 
 
 
