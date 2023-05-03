@@ -3,6 +3,36 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+7 - Is this a triangle?
+*/
+//function accepts 3 integer values
+//return true if a triangle can be built with sides of those lengths
+function isTriangle(a,b,c) {
+  //any two sides of a triangle is larger than a third side
+  if (a+b > c && a+c > b && c+b > a) {
+    return true
+  }
+  return false
+}
+//true
+console.log(isTriangle(1,2,2))
+
+
+//false
+console.log(isTriangle(7,2,2))
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 8 - Reversed Strings
 */
 //return the argument passed in, in reverse order
@@ -16,7 +46,7 @@ function reversedString(str) {
   return reversed.join('')
 
 }
-console.log(reversedString('world'))
+//console.log(reversedString('world'))
 
 
 
