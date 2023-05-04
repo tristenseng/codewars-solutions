@@ -2,6 +2,42 @@
 KYU RANK - CHALLENGE NAME
 */
 
+
+/*
+parameter - array of arrays of length two (pairs)
+return - array of strings 'senior' or 'open' depending on conditions that the argument meets
+*/
+
+function openOrSenior(data){
+  //iterate through list of data - for...of loop
+  let categoryOfMemberArr = []
+  for (member of data) {
+    //[0] > 54 && [1] > 7 ? categoryArr.push('Senior') : .push('Open)
+    if(member[0] > 54 && member[1] > 7 ) {
+      categoryOfMemberArr.push('Senior')
+    }
+    else {
+      categoryOfMemberArr.push('Open')
+    }
+  }
+  return categoryOfMemberArr
+
+}
+let list = [[45, 12],[55,21],[19, -2],[104, 20]]
+console.log(openOrSenior(list))
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 8 - Filter out the geese
 geese are any string given in the pre-populated array
@@ -19,7 +55,7 @@ function gooseFilter (birds) {
   return birds.filter(bird => !geese.includes(bird))
 };
 let birds = ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]
-console.log(gooseFilter(birds))
+//console.log(gooseFilter(birds))
 
 
 
