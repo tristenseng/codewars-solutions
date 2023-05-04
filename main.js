@@ -3,6 +3,31 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - Filter out the geese
+geese are any string given in the pre-populated array
+write a function that takes a list of strings as an arguments
+and returns a filtered list containing the same elements with any geese removed
+p - array of strings only
+r - array filtered from argument array removing any elements matching from the pre-populated array
+e - so any geese within pre-populated array should be removed from the argument array
+*/
+function gooseFilter (birds) {
+  //pre-populated array given
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  //filter array method
+  //condition of filter if any geese element within the geese array is within the argument array, remove
+  return birds.filter(bird => !geese.includes(bird))
+};
+let birds = ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]
+console.log(gooseFilter(birds))
+
+
+
+
+
+
+
+/*
 7 - Is this a triangle?
 */
 //function accepts 3 integer values
@@ -15,11 +40,11 @@ function isTriangle(a,b,c) {
   return false
 }
 //true
-console.log(isTriangle(1,2,2))
+//console.log(isTriangle(1,2,2))
 
 
 //false
-console.log(isTriangle(7,2,2))
+//console.log(isTriangle(7,2,2))
 
 
 
