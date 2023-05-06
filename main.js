@@ -2,6 +2,28 @@
 KYU RANK - CHALLENGE NAME
 */
 
+
+/*
+7 - Find the next perfect square
+*/
+//parameter is an integer (potential perfect square) no input validation
+//return the next integral perfect square if the one passed in the parameter is indeed a perfect square
+//examples function findNextSquare(sq) {...} findNextSquare(625) == 676
+//return Math.pow(n+1, 2) ; n being the sqrt of the argument value assuming it is indeed a perfect square
+//conditional check if sqrt of sq is integer
+//if it is take 2nd power of sqrt of sq+1
+//return power of (Math.power(sqrt(sq)+1,2)
+function findNextSquare(sq) {
+  const squareRoot = Math.sqrt(sq)
+  if (Number.isInteger(squareRoot)) {
+    return Math.pow(squareRoot+1,2)
+  }
+  return -1
+}
+// console.log(findNextSquare(625))
+// console.log(findNextSquare(654))
+
+
 /*
 7 - Jaden Casing Strings
 */
