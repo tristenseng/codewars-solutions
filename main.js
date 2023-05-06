@@ -2,8 +2,38 @@
 KYU RANK - CHALLENGE NAME
 */
 
+/*
+7 - Jaden Casing Strings
+*/
+//no parameters its a string property
+//return string of capitalized first letter of each word
+//example String.prototype.toJadenCase function () {...}
+//let str = "this is a string"
+//str = str.toJadenCase() //"This Is A String"
+String.prototype.toJadenCase = function () {
+  let strArr = [...this]
+  for (let i = 0; i < strArr.length; i++) {
+    if (strArr[i-1] == " " || strArr[i-1] == undefined) {
+      strArr.splice(i,1,`${strArr[i].toUpperCase()}`)
+    }
+  }
+  return strArr.join("")
+};
+// let str = "this is a string"
+// console.log(str.toJadenCase())
+
+
+
+
+
+
+
+
+
+
 
 /*
+7 - Categorize New Member
 parameter - array of arrays of length two (pairs)
 return - array of strings 'senior' or 'open' depending on conditions that the argument meets
 */
@@ -24,7 +54,7 @@ function openOrSenior(data){
 
 }
 let list = [[45, 12],[55,21],[19, -2],[104, 20]]
-console.log(openOrSenior(list))
+//console.log(openOrSenior(list))
 
 
 
