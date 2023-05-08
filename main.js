@@ -1,6 +1,55 @@
 /*
 KYU RANK - CHALLENGE NAME
 */
+
+
+
+/*
+8 - Count of positives / sum of negatives
+p - array of integers (check for empty/null array)
+r - array of integers , first value is the count of positive numbers, 2nd is sum of negatives
+e - function countPositivesSumNegatives(input) {
+  check for empty or null array
+  //iterate through arg
+  //if < 0 else if > 0 //ignore zero edge case or include with the negative sums(lets us simplify the if statement)
+    iterate positive or accumulate into negative depending on condition
+  return [countPositive, sumNegative]
+}
+let arr - [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]
+console.log(countPositivesSumNegatives(arr)) == [10, -65]
+*/
+function countPositivesSumNegatives(input) {
+  let countPositive = 0
+  let sumNegative = 0
+  if (!Array.isArray(input) || !input.length) {
+    return []
+  }
+  for (i in input) {
+    if (input[i] < 1) {
+      sumNegative+=input[i]
+    }
+    else {
+
+      countPositive++
+    }
+  }
+  return [countPositive, sumNegative]
+}
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]
+console.log(countPositivesSumNegatives(arr)) == [10, -65]
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 7 - Between Extremes
 p - array of integer values
@@ -15,8 +64,8 @@ function betweenExtremes(numbers) {
   return max-min
   //return math.max - math.min
 }
-let arr = [-23,0,23,1,2,54,66] //89
-console.log(betweenExtremes(arr))
+// let arr = [-23,0,23,1,2,54,66] //89
+// console.log(betweenExtremes(arr))
 
 
 
