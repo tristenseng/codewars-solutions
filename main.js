@@ -1,6 +1,24 @@
 /*
 KYU RANK - CHALLENGE NAME
 */
+/*
+7 - Between Extremes
+p - array of integer values
+r - return the difference between largest and smallest value
+e - betweenExtremes([-23,0,23,1,2,54,66]) == 89
+
+*/
+function betweenExtremes(numbers) {
+  //math min/max
+  let min = Math.min(...numbers)
+  let max = Math.max(...numbers)
+  return max-min
+  //return math.max - math.min
+}
+let arr = [-23,0,23,1,2,54,66] //89
+console.log(betweenExtremes(arr))
+
+
 
 
 /*
