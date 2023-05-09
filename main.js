@@ -2,6 +2,24 @@
 KYU RANK - CHALLENGE NAME
 */
 
+/*
+6 - persistent bugger
+p - positive integer ; no input validation
+r - integer ; persistence integer
+e -
+*/
+
+function persistence(num) {
+  let numArr = ()
+}
+console.log(persistence(39)) //3*9 = 27 // 2*7 = 14 // 1*4 = 4 //ans = 3
+console.log(persistence(4)) //4 //ans = 0 already single digit
+console.log(persistence(13)) //1*3 = 3 //ans = 1
+
+
+
+
+
 
 
 /*
@@ -36,8 +54,8 @@ function countPositivesSumNegatives(input) {
   return [countPositive, sumNegative]
 }
 
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]
-console.log(countPositivesSumNegatives(arr)) == [10, -65]
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]
+// console.log(countPositivesSumNegatives(arr)) == [10, -65]
 
 
 
