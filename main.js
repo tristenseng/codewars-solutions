@@ -2,6 +2,27 @@
 KYU RANK - CHALLENGE NAME
 */
 
+
+
+/*
+7 - Highest and Lowest
+*/
+//p - string of space separated numbers no input validation
+//r - string of two numbers separated by a single space
+// highAndLow("8 5 4 8 3 2 1") == "8 1"
+function highAndLow(numbers){
+  //split string into array
+  numbers = numbers.split(" ")
+  //map number
+  numbers = numbers.map(Number)
+  //math max / min
+  let max = Math.max(...numbers)
+  let min = Math.min(...numbers)
+  return `${max} ${min}`
+
+}
+
+
 /*
 8 - Powers of 2
 recieve a value n. return a list of all powers of 2 with the exponent ranging from 0 to n
