@@ -2,6 +2,36 @@
 KYU RANK - CHALLENGE NAME
 */
 
+/*
+8 - Powers of 2
+recieve a value n. return a list of all powers of 2 with the exponent ranging from 0 to n
+p - non-negative integer
+r - array of integers
+e -
+*/
+function powersOfTwo(n) {
+  //iterate from 0 to n
+  let nArr = []
+  for (let i = 0; i <= n; i++) {
+  //power of 2 to n
+  nArr.push(Math.pow(2,i))
+  //push to array
+  }
+  return nArr
+
+
+}
+
+console.log(powersOfTwo(2)) //[2^0, 2^1, 2^2] [1,2,4]
+console.log(powersOfTwo(3)) //[2^0, 2^1, 2^2, 2^3] [1,2,4,8]
+
+
+
+
+
+
+
+
 
 
 
