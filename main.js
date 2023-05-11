@@ -2,6 +2,22 @@
 KYU RANK - CHALLENGE NAME
 */
 
+/*
+8 - Convert number to reversed array of digits
+*/
+// given non negative integer
+// return array of the integer split into digits and reversed
+// digitize(39274) == [4, 7, 2, 9, 3]
+
+function digitize(n) {
+  //split into array
+  let arr = n.toString().split('')
+  //reverse array
+  return arr.reverse().map(Number)
+  //return array
+}
+console.log(digitize(436950)) //[0,5,9,6,3,4]
+
 
 
 /*
