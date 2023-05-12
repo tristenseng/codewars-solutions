@@ -3,6 +3,33 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+6 - The Supermarket Queue
+*/
+// p - customer array of positive integers representing a queue, n the amount of registers available
+// r - total time required for all customers to check out
+
+
+function queueTime(customers, n) {
+  //create n lanes
+  //find next min lane and put next customer in that lane
+
+  let lanes = Array(n).fill(0)
+  for (let cust of customers) {
+    let nextMinLane = lanes.indexOf(Math.min(...lanes))
+    lanes[nextMinLane] += cust
+  }
+  //return longest lane
+  return Math.max(...lanes)
+
+}
+// queueTime([2, 3, 10], 2) == 12
+// queueTime([1, 7, 5, 3], 3) == 7
+
+
+
+
+
+/*
 8 - Powers of 2
 recieve a value n. return a list of all powers of 2 with the exponent ranging from 0 to n
 p - non-negative integer
