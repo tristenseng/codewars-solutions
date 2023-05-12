@@ -2,6 +2,39 @@
 KYU RANK - CHALLENGE NAME
 */
 
+
+
+/*
+6 - The Supermarket Queue
+*/
+//an array of positive integers representing how long customers will take, n the amount of registers available
+//return how long itll take to get all the customers checked out
+function queueTime(customers, n) {
+  //create n lanes
+  let lanes = Array(n).fill(0)
+  //find shortest lane
+  //add next person in queue to shortest lane
+  //return longest queue (the last customer to be served in the queue)
+  for (cust of customers) {
+    let nextMinLane = lanes.indexOf(Math.min(...lanes))
+    lanes[nextMinLane] += cust
+  }
+  return Math.max(...lanes)
+
+}
+
+
+
+//console.log(queueTime([2, 3, 10], 2)) == 12
+// queueTime([1, 7, 5, 3], 3) == 7
+
+
+
+
+
+
+
+
 /*
 8 - Powers of 2
 recieve a value n. return a list of all powers of 2 with the exponent ranging from 0 to n
@@ -22,8 +55,8 @@ function powersOfTwo(n) {
 
 }
 
-console.log(powersOfTwo(2)) //[2^0, 2^1, 2^2] [1,2,4]
-console.log(powersOfTwo(3)) //[2^0, 2^1, 2^2, 2^3] [1,2,4,8]
+// console.log(powersOfTwo(2)) //[2^0, 2^1, 2^2] [1,2,4]
+// console.log(powersOfTwo(3)) //[2^0, 2^1, 2^2, 2^3] [1,2,4,8]
 
 
 
