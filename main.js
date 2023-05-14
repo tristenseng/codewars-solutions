@@ -1,6 +1,35 @@
 /*
 KYU RANK - CHALLENGE NAME
 */
+/*
+6 - ...Eureka!!
+*/
+//p - two integers, defining a range of values (b is inclusive)
+//make a property that returns an array of values between the range of values given in the argument
+//sumDigPow(1, 10) == [1, 2, 3, 4, 5, 6, 7, 8, 9]
+//sumDigPow(90, 150) == [135]
+
+function sumDigPow(a, b) {
+  // iterate from a to b
+  let eurekaValues = []
+
+  for (let i = a; i <= b; i++) {
+    if (i.toString().length == 1) {
+      eurekaValues.push(i)
+    }
+    // check each value to see if it equal to itself still when ran through some function
+    else {
+      let val = i.toString().split("").map(Number).reduce((accum, val, i) => Math.pow(val, i+1) + accum, 0)
+      if (val == i) {
+        eurekaValues.push(i)
+      }
+    }
+  }
+  
+  return eurekaValues
+}
+// console.log(sumDigPow(1, 10))
+// console.log(sumDigPow(90, 150))
 
 
 
