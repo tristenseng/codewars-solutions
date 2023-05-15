@@ -3,6 +3,33 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+6 - Remove the parenthese
+*/
+//given a string (with stuff inside of parentheses)
+//return a string (without stuff inside parentheses and without the parentheses)
+//removeParentheses("here is a (unwanted) thing") == "here is a thing"
+function removeParentheses(s){
+  //iterate through string
+  //if we come across an open parenthese remove each char after until we come across close parenthese
+  let counter = 0;
+  let result = ""
+  for (let letter of s) {
+    if (letter == '(') {
+      counter++
+    }
+    if (counter == 0) {
+      result += letter
+    }
+    if (counter > 0 && letter == ')') {
+      counter--
+    }  
+  }
+  return result
+}
+// console.log(removeParentheses("here is a (unwanted) thing"))
+
+
+/*
 8 - Quarter of the year
 */
 //p - integer representing the month
