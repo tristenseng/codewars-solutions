@@ -1,6 +1,19 @@
 /*
 KYU RANK - CHALLENGE NAME
 */
+
+/*
+8 - Quarter of the year
+*/
+//p - integer representing the month
+//r - the quarter of the year it belongs to
+//console.log(quarterOf(3)) //1
+const quarterOf = (month) => {
+  console.log(month)
+  return Math.ceil(month/3)
+}
+//console.log(quarterOf(3))
+
 /*
 6 - ...Eureka!!
 */
