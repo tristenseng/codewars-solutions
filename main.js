@@ -19,17 +19,23 @@ function isPangram(string){
   traverse over the string
   look at each element and check if it is indeed a letter
   add letter to set if indeed a letter
-  check if set is length 27
+  check if set is length 26
   if whole string traversed without letter being sent false then true
   */
   let set = new Set();
   for (let letter of string) {
     if (isCharALetter(letter)) {
-      set.add(letter)
+      set.add(letter.toLowerCase())
     }
   }
+  console.log([...set].length)
+  return [...set].length == 26
 }
-//console.log(isPangram(string))
+let string = "The quick brown fox jumps over the lazy dog."
+console.log(isPangram(string))
+//f(x) = y
+
+
 
 
 /*
