@@ -3,6 +3,36 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+6 - Detect Pangram
+*/
+//given a string, potentially a pangram
+//return true or false depending on if the the string is a pangram or not
+//let string = "The quick brown fox jumps over the lazy dog."
+//console.log(isPangram(string))
+// == true
+function isCharALetter(char) {
+  return (char.toLowerCase() != char.toUpperCase())
+}
+
+function isPangram(string){
+  /*
+  traverse over the string
+  look at each element and check if it is indeed a letter
+  add letter to set if indeed a letter
+  check if set is length 27
+  if whole string traversed without letter being sent false then true
+  */
+  let set = new Set();
+  for (let letter of string) {
+    if (isCharALetter(letter)) {
+      set.add(letter)
+    }
+  }
+}
+//console.log(isPangram(string))
+
+
+/*
 6 - Remove the parenthese
 */
 //given a string (with stuff inside of parentheses)
