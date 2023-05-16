@@ -28,11 +28,10 @@ function isPangram(string){
       set.add(letter.toLowerCase())
     }
   }
-  console.log([...set].length)
   return [...set].length == 26
 }
 let string = "The quick brown fox jumps over the lazy dog."
-console.log(isPangram(string))
+//console.log(isPangram(string))
 //f(x) = y
 
 
