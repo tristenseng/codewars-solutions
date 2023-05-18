@@ -2,6 +2,32 @@
 KYU RANK - CHALLENGE NAME
 */
 
+/*
+6 - Unique In Order
+were given a string as an argument
+return array of elements without any elements with same value next to each other
+elements can repeat just cant be next to each other
+console.log(uniqueInOrder('AAAABBBCCDAABBB')) //['A', 'B', 'C', 'D', 'A', 'B']
+*/
+var uniqueInOrder=function(iterable){
+  
+  //loop the iterable string
+  let uniqueArr = []
+  let unique = false;
+  for (let ch of iterable) {
+    //if ch is not equivalent to the last element in the array
+    if (ch != uniqueArr[uniqueArr.length - 1]) {
+      uniqueArr.push(ch)
+    }
+
+  }
+  return uniqueArr
+  //place iterable element into new array if meet some conditions
+  //return new array
+  
+}
+
+
 
 /*
 6 - Playing with digits
