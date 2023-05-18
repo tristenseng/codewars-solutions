@@ -2,6 +2,34 @@
 KYU RANK - CHALLENGE NAME
 */
 
+
+/*
+6 - Playing with digits
+
+take digits of n and raise to successive power of p
+
+p - positive integer n, positive integer p
+
+r - return positive integer k
+
+*/
+
+function digPow(n, p){
+  let nArr = n.toString().split("")
+  nArr = nArr.map(Number).reduce((accum, num) => Math.pow(num, p++) + accum, 0)
+  let k = nArr/n
+  if (k == Math.floor(nArr/n)) {
+      return k
+
+      }
+
+  return -1
+
+}
+
+
+
+
 /*
 6 - Detect Pangram
 */
