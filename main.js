@@ -3,6 +3,76 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+6 - Array of Lists of Sets
+*/
+//params - array of strings - assume all lowercase
+//return - strings of the same characters - add their indices
+//console.log(solve(["abc","abbc","ab","xyz","xy","zzyx"])) == [1,8]
+function solve(arr){
+  //iterate through array
+  //turn each string to a set
+  //sort
+  let arrOfSets = []
+  for (let i in arr) {
+    arr[i] = arr[i].split("").sort()
+    arrOfSets.push(new Set(arr[i]))
+  }
+
+
+  //add set to dictionary and add up the indexes of matching sets
+  let result = {}
+  let final = {}
+  for(let i in arrOfSets) {
+    let currSet = [...arrOfSets[i]]
+    if (result[currSet] != undefined) {
+      result[currSet] += Number(i)
+      //making it into this conditionals means theres another matching element
+      //so push that into the final set
+      final[currSet] = result[currSet]
+    }
+    else {
+      result[currSet] = Number(i)
+    }
+
+  }
+
+  return Object.values(final).sort((a,b) => a-b) 
+
+};
+console.log(solve(["abc","abbc","ab","xyz","xy","zzyx"])) //[1,8]
+
+
+
+
+
+
+
+
+/*
+8 - Fake Binary
+*/
+//p - given a string of digits
+//r - fake binary string
+//fakeBin('45385593107843568') == '01011110001100111'
+function fakeBin(x){
+  x = x.split("")
+  let fakeBin = []
+  for (let ch of x) {
+    if (ch < 5) {
+      fakeBin.push(0)
+    }
+    else {
+      fakeBin.push(1)
+    }
+    
+  }
+  return fakeBin.join("")
+}
+//console.log(fakeBin('45385593107843568'))
+
+
+
+/*
 6 - Unique In Order
 were given a string as an argument
 return array of elements without any elements with same value next to each other
