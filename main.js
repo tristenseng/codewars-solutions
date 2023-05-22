@@ -2,6 +2,26 @@
 KYU RANK - CHALLENGE NAME
 */
 
+
+/*
+7 - A Promise is a Promise
+no parameter
+return - a resolved promise that returns hello world
+both solutions below are the same!
+*/
+// async function promiseHelloWorld() {
+
+//   return "Hello World!"
+// }
+
+function promiseHelloWorld() {
+  return Promise.resolve("Hello World!")
+}
+
+console.log(promiseHelloWorld())
+
+
+
 /*
 6 - Array of Lists of Sets
 */
@@ -39,7 +59,7 @@ function solve(arr){
   return Object.values(final).sort((a,b) => a-b) 
 
 };
-console.log(solve(["abc","abbc","ab","xyz","xy","zzyx"])) //[1,8]
+//console.log(solve(["abc","abbc","ab","xyz","xy","zzyx"])) //[1,8]
 
 
 
