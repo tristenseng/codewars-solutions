@@ -3,6 +3,38 @@ KYU RANK - CHALLENGE NAME
 */
 
 
+
+
+/*
+7 - Over The Road
+*/
+//param - address and n houses on each side of the street
+//we need the opposite address across the street from the argument address
+//address pattern given
+//return - the opposite side of the street's address
+function overTheRoad(address, n){
+  //if address is even/odd...
+  //find the index of the argument address
+  let index;
+  let answer;;
+  //even address
+  if (address % 2 == 0) {
+    index = address/2
+    answer = 2*(n-index) + 1
+  }
+  //odd address
+  else {
+    index = n - (address-1)/2
+    answer = 2*index
+  }
+  //2(n-i) + 1 = odd address
+  //2i = even address
+  return answer
+  //return index address of across the street
+}
+//console.log(overTheRoad(1,3)) == 6ß
+
+
 /*
 7 - A Promise is a Promise
 no parameter
