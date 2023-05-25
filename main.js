@@ -1,6 +1,22 @@
 /*
 KYU RANK - CHALLENGE NAME
 */
+
+/*
+7 - debug basic calc
+ */
+const calculate = (a, op, b) => {
+	switch (op) {
+		case "+": return a + b
+		case "-": return a - b
+		case "*": return a * b
+		case "/": return b ? a / b : null
+	}
+
+	return null
+}
+
+
 /*
 7 - say hello world js style
  */
