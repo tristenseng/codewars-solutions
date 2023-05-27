@@ -3,6 +3,18 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - Sum Arrays
+params - array of integers
+return - sum of the numbers
+example - sum([]) == 0
+          sum([1, 5, 6, -4, -2.5]) == 5.5
+*/
+function sum(numbers) {
+  return numbers.reduce((accum, num) => num + accum, 0)
+};
+
+
+/*
 7 - debug basic calc
  */
 const calculate = (a, op, b) => {
