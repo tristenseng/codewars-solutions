@@ -12,7 +12,7 @@ function invert(array) {
 
 
 /*
-6 - common array elements
+6 - common array elements IN PROGRESS
 */
 //param - 3 arrays of integers - no input validation
 //return - the common elements in all the arrays added together
