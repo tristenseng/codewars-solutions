@@ -12,38 +12,33 @@ function invert(array) {
 
 
 /*
-6 - common array elements IN PROGRESS
+6 - common array elements
 */
 //param - 3 arrays of integers - no input validation
 //return - the common elements in all the arrays added together
 //example - console.log(common([1,2,3],[5,3,2],[7,3,2])) == 5
-
+//
 function common(a,b,c){
-  //compare elements in first two arrays
-  //push to new array
-  let tempArr = []
-  for (let i = 0; i < a.length; i++) {
-    for (let j = 0; j < b.length; j++) {
-      if (a[i] == b[j]) {
-        tempArr.push(a[i])
-        break;
-      }
-    }
-  }
-  //compare new array to last array
-  //push to final array
+  //iterate through array a
+  //if the element is in both array b and c then splice it
+  //then push to finalArr
+  //reduce method on finalArr
   let finalArr = []
-  for (let i = 0; i < tempArr.length; i++) {
-    for (let j = 0; j < c.length; j++) {
-      if (tempArr[i] == c[j]) {
-        finalArr.push(tempArr[i])
-        break;
-      }
+  for (let i = 0; i < a.length; i++) {
+    let temp = a[i]
+    if (b.includes(temp) && c.includes(temp)) {
+      b.splice(b.indexOf(temp), 1)
+      c.splice(c.indexOf(temp), 1)
+      finalArr.push(temp)
     }
   }
-  //reduce method on final array
-  return finalArr.reduce((accum, num) => accum + num, 0)
+  return finalArr.reduce((accum, num) => num+accum, 0)
 }
+let a = [1,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+let b = [9, 86, 7, 1, 2, 3,17]
+let c = [1,2,3,4,5,6,7,8,9,3421,17]
+console.log(common(a,b,c))
+//1,3,7,9 == 20
 
 
 /*
