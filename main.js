@@ -2,6 +2,50 @@
 KYU RANK - CHALLENGE NAME
 */
 
+
+/*
+8 - invert values
+*/
+function invert(array) {
+  return array.map(x => x*-1)
+}
+
+
+/*
+6 - common array elements
+*/
+//param - 3 arrays of integers - no input validation
+//return - the common elements in all the arrays added together
+//example - console.log(common([1,2,3],[5,3,2],[7,3,2])) == 5
+
+function common(a,b,c){
+  //compare elements in first two arrays
+  //push to new array
+  let tempArr = []
+  for (let i = 0; i < a.length; i++) {
+    for (let j = 0; j < b.length; j++) {
+      if (a[i] == b[j]) {
+        tempArr.push(a[i])
+        break;
+      }
+    }
+  }
+  //compare new array to last array
+  //push to final array
+  let finalArr = []
+  for (let i = 0; i < tempArr.length; i++) {
+    for (let j = 0; j < c.length; j++) {
+      if (tempArr[i] == c[j]) {
+        finalArr.push(tempArr[i])
+        break;
+      }
+    }
+  }
+  //reduce method on final array
+  return finalArr.reduce((accum, num) => accum + num, 0)
+}
+
+
 /*
 8 - Sum Arrays
 params - array of integers
