@@ -4,6 +4,28 @@ KYU RANK - CHALLENGE NAME
 
 
 /*
+8 - cat years, dog years
+param - integer representing human years
+return - array of integers representing [human, cat, dog]
+humanYearsCatYearsDogYears(1) == [1,15,15]
+*/
+var humanYearsCatYearsDogYears = function(humanYears) {
+  if (humanYears == 1) {
+    return [1,15,15]
+  }
+  else if (humanYears == 2) {
+    return [2,24,24]
+  }
+  else if (humanYears > 2) {
+    let catYears = 24 + ((humanYears-2)*4) 
+    let dogYears = 24 + ((humanYears-2)*5)
+    return [humanYears, catYears, dogYears];
+  }
+
+}
+
+
+/*
 8 - invert values
 */
 function invert(array) {
