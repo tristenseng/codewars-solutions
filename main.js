@@ -2,6 +2,29 @@
 KYU RANK - CHALLENGE NAME
 */
 
+/*
+7 - get the middle char
+param - a word
+return - the middle character of the word or the first two middle chars of the word (if even)
+*/
+function getMiddle(s) {
+  s = Array.from(s)
+  //determine whether even or odd
+  //determine middle
+  //take middle char(s)
+  //return the middle char(s)
+  let middleCh = []
+  let midIndex = Math.floor(s.length/2)
+  if (s.length % 2 == 0) {
+    middleCh.push(s[midIndex-1])
+    middleCh.push(s[midIndex])
+  }
+  else {
+    middleCh.push(s[midIndex])
+  }
+  return middleCh.join("")
+}
+
 
 /*
 8 - cat years, dog years
