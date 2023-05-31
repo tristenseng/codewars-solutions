@@ -3,6 +3,21 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - is it a palindrome
+param - a string of characters
+return - boolean value if it is a palindrome
+*/
+function isPalindrome(x) {
+  x = x.toLowerCase()
+  //turn argument to array then reverse then join
+  let reversedStr = Array.from(x).reverse().join("")
+  if (reversedStr == x) {
+    return true
+  }
+  return false
+}
+
+/*
 7 - get the middle char
 param - a word
 return - the middle character of the word or the first two middle chars of the word (if even)
