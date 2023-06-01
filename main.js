@@ -2,6 +2,32 @@
 KYU RANK - CHALLENGE NAME
 */
 
+
+/*
+5 - job matching #3
+param - candidate and job objects
+return boolean if candidate fits job
+*/
+function match(candidate, job) { 
+  
+  //iterate through job skills
+  //compare values between both candidate and job
+  //multiply experience by desired preference
+  //compare skills
+  //compare years
+  //return false if not
+  //if true
+}
+
+
+let candidate = {
+  skills: [{ name: 'CoffeeScript', experience: 3, preference: 'neutral' }]
+}
+let job = { 
+  skills: [{ name: 'CoffeeScript', idealYears: 3, substitutions: [{ name: 'JavaScript' }] }]
+}
+
+console.log(match(candidate, job)) //true
 /*
 8 - is it a palindrome
 param - a string of characters
