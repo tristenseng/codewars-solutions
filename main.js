@@ -1,7 +1,24 @@
 /*
 KYU RANK - CHALLENGE NAME
 */
+/*
+7 - count the digit
+param - n integers, d digit
+0 to n squared by itself
+how many of those squared values have the digit d in it?
+return that many
+*/
+function nbDig(n, d) {
+  let count = 0
+  for (let i = 0; i <= n; i++) {
+    let square = i*i
+    if (square.toString().split("").includes(d.toString())) {
+        //count multiple instances within the same array
+    }
 
+  }
+  return count
+}
 /*
 8 - switch it up
 param - an integer
