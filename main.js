@@ -19,6 +19,9 @@ function nbDig(n, d) {
   }
   return count
 }
+console.log(nbDig(10,0))//0,1,2,3,4,5,6,7,8,9,10
+//0,1,4,9,16,25,36,49,64,81,100
+//2
 /*
 8 - switch it up
 param - an integer
@@ -67,35 +70,35 @@ function switchItUp(number){
 param - candidate and job objects
 return boolean if candidate fits job
 */
-function match(candidate, job) { 
+// function match(candidate, job) { 
   
-  //iterate through job skills
-  //compare values between both candidate and job
-  //multiply experience by desired preference
-  //compare skills
-  //compare years
-  //return false if not
-  //if true
-  if (candidate.skills.length < job.skills.length) {
-    return false
-  }
-  else {
-    for (let j of job) {
+//   //iterate through job skills
+//   //compare values between both candidate and job
+//   //multiply experience by desired preference
+//   //compare skills
+//   //compare years
+//   //return false if not
+//   //if true
+//   if (candidate.skills.length < job.skills.length) {
+//     return false
+//   }
+//   else {
+//     for (let j of job) {
 
-    }
-  }
+//     }
+//   }
 
-}
+// }
 
 
-let candidate = {
-  skills: [{ name: 'CoffeeScript', experience: 3, preference: 'neutral' }]
-}
-let job = { 
-  skills: [{ name: 'CoffeeScript', idealYears: 3, substitutions: [{ name: 'JavaScript' }] }]
-}
+// let candidate = {
+//   skills: [{ name: 'CoffeeScript', experience: 3, preference: 'neutral' }]
+// }
+// let job = { 
+//   skills: [{ name: 'CoffeeScript', idealYears: 3, substitutions: [{ name: 'JavaScript' }] }]
+// }
 
-console.log(match(candidate, job)) //true
+// console.log(match(candidate, job)) //true
 /*
 8 - is it a palindrome
 param - a string of characters
@@ -191,7 +194,7 @@ function common(a,b,c){
 let a = [1,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
 let b = [9, 86, 7, 1, 2, 3,17]
 let c = [1,2,3,4,5,6,7,8,9,3421,17]
-console.log(common(a,b,c))
+//console.log(common(a,b,c))
 //1,3,7,9 == 20
 
 
