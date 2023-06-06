@@ -12,9 +12,15 @@ function nbDig(n, d) {
   let count = 0
   for (let i = 0; i <= n; i++) {
     let square = i*i
-    if (square.toString().split("").includes(d.toString())) {
-        //count multiple instances within the same array
+    let squareArr = square.toString().split('')
+    for (let j = 0; j < squareArr.length; j++) {
+      //count multiple instances within the same array
+      if (squareArr[j] == d) {
+        count++
+      }
     }
+
+    
 
   }
   return count
