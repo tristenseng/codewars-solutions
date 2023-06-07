@@ -1,6 +1,20 @@
 /*
 KYU RANK - CHALLENGE NAME
 */
+
+/*
+7 - You're a square!
+param - an integer
+return - return true if its a perfect square
+*/
+var isSquare = function(n){
+  let num = Math.sqrt(n)
+  if (Math.floor(num) == Math.ceil(num)) {
+    return true
+  }
+  return false
+}
+
 /*
 7 - count the digit
 param - n integers, d digit
