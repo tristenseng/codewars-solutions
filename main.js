@@ -3,6 +3,32 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+6 - Mexican Wave
+param - a lowercase string
+return - an array of the same string where each iteration of the string has a single capital letter
+staring from the first letter to the last
+
+*/
+function wave(str){
+  //if str includes whitespace modify str to remove whitespace
+  let newStr = "";
+  if (str.includes(" ")) {
+    str = Array.from(str)
+    for (let i = 0; i < str.length; i++) {
+      if(str[i] != " ") {
+        newStr.push(str[i])
+      }
+      
+    }
+  }
+  //initialize empty array
+  //for loop traversing length of str
+  //push to array
+  //some type of splice
+  //return array
+}
+
+/*
 7 - You're a square!
 param - an integer
 return - return true if its a perfect square
