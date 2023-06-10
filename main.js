@@ -3,6 +3,25 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - Lario and Muigi Pipe Problem
+param - array of numbers in ascending order
+return fixed list so that values increment by 1 from min to max value
+*/
+
+function pipeFix(numbers){
+  //store min/max value
+  //for loop from min to max
+  //push val to some array
+  let min = Math.min(...numbers)
+  let max = Math.max(...numbers)
+  let fixedList = []
+  for (let i = min; i <= max; i++) {
+    fixedList.push(i)
+  }
+  return fixedList
+}
+
+/*
 6 - Mexican Wave
 param - a lowercase string
 return - an array of the same string where each iteration of the string has a single capital letter
@@ -11,22 +30,30 @@ staring from the first letter to the last
 */
 function wave(str){
   //if str includes whitespace modify str to remove whitespace
-  let newStr = "";
-  if (str.includes(" ")) {
-    str = Array.from(str)
-    for (let i = 0; i < str.length; i++) {
-      if(str[i] != " ") {
-        newStr.push(str[i])
-      }
-      
+  let wave = []
+  let newStr = []
+  str = Array.from(str)
+  for (let i = 0; i < str.length; i++) {
+    if(str[i] != " ") {
+      newStr.push(str[i])
     }
+    
   }
+  newStr = newStr.join("")
   //initialize empty array
+  for (let j = 0; j < newStr.length; i++) {
+    wave.push(str)
+  }
   //for loop traversing length of str
   //push to array
   //some type of splice
   //return array
+  return newStr
 }
+console.log(wave("h ello"))
+
+
+
 
 /*
 7 - You're a square!
@@ -65,7 +92,7 @@ function nbDig(n, d) {
   }
   return count
 }
-console.log(nbDig(10,0))//0,1,2,3,4,5,6,7,8,9,10
+//console.log(nbDig(10,0))//0,1,2,3,4,5,6,7,8,9,10
 //0,1,4,9,16,25,36,49,64,81,100
 //2
 /*
