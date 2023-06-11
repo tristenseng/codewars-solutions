@@ -2,6 +2,22 @@
 KYU RANK - CHALLENGE NAME
 */
 
+
+/*
+8 - Opposites Attractg
+param - two parameters both integers
+return true if one even and one odd
+return false if else
+*/
+function lovefunc(flower1, flower2){
+  if ((flower1 % 2 == 0 && flower2 % 2 == 1) || flower1 % 2 == 1 && flower2 % 2 == 0) {
+    return true
+  }
+  else {
+    return false
+  }
+}
+
 /*
 8 - Lario and Muigi Pipe Problem
 param - array of numbers in ascending order
