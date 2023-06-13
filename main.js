@@ -2,6 +2,28 @@
 KYU RANK - CHALLENGE NAME
 */
 
+/*
+7 - Simple Fun #176: Reverse Letter
+param - string
+return - string reversed and omit all non-alphabetic characters
+
+*/
+function reverseLetter(str) {
+  str = str.split("")
+  let newStr = []
+  let reversedStr = []
+  for (let i = 0; i < str.length; i++) {
+    //if it is a letter
+    if (str[i].toUpperCase() != str[i].toLowerCase()) {
+      newStr.push(str[i])
+    }
+  }
+  
+  return newStr.reverse().join("")
+  
+  
+}
+
 
 /*
 8 - Opposites Attractg
