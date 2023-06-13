@@ -1,6 +1,32 @@
 /*
 KYU RANK - CHALLENGE NAME
 */
+/*
+8 - Counting sheep...
+param - array of boolean values
+return - how many values are true (how many sheep are there?)
+e - 
+*/
+function countSheeps(arrayOfSheep) {
+  //initialize counter
+  let counter = 0
+  //iterate through array
+  for (let val of arrayOfSheep) {
+    //if true +1
+    if (val == true) {
+      counter++
+    }
+  }
+  return counter
+
+}
+var array1 = [true,  true,  true,  false,
+  true,  true,  true,  true ,
+  true,  false, true,  false,
+  true,  false, false, true ,
+  true,  true,  true,  true ,
+  false, false, true,  true ]
+// console.log(countSheeps(array1)) //17
 
 /*
 7 - Simple Fun #176: Reverse Letter
@@ -79,7 +105,7 @@ function wave(str){
   }
   newStr = newStr.join("")
   //initialize empty array
-  for (let j = 0; j < newStr.length; i++) {
+  for (let j = 0; j < newStr.length; j++) {
     wave.push(str)
   }
   //for loop traversing length of str
