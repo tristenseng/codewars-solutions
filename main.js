@@ -21,7 +21,7 @@ function peopleWithAgeDrink(age) {
     return "drink beer"
   }
 }
-console.log(peopleWithAgeDrink(22)) //'drink whisky'
+// console.log(peopleWithAgeDrink(22)) //'drink whisky'
 
 /*
 8 - Counting sheep...
@@ -110,33 +110,31 @@ function pipeFix(numbers){
 /*
 6 - Mexican Wave
 param - a lowercase string
-return - an array of the same string where each iteration of the string has a single capital letter
-staring from the first letter to the last
+return - an array of the same string where each iteration of the string has a 
+single capital letter starting from the first letter to the last
 
 */
 function wave(str){
-  //if str includes whitespace modify str to remove whitespace
-  let wave = []
-  let newStr = []
+  //initialize wavy array
+  let wavy = []
+  //arg string to array
   str = Array.from(str)
+
+  //iterate through length of string
   for (let i = 0; i < str.length; i++) {
-    if(str[i] != " ") {
-      newStr.push(str[i])
+    //copies array (pass by value kinda)
+    let temp = str.slice(0)
+
+    //if to capitalize the ith character
+    if (temp[i] != " ") { 
+      temp[i] = temp[i].toUpperCase()
+      wavy.push(temp.join(""))
     }
-    
   }
-  newStr = newStr.join("")
-  //initialize empty array
-  for (let j = 0; j < newStr.length; j++) {
-    wave.push(str)
-  }
-  //for loop traversing length of str
-  //push to array
-  //some type of splice
-  //return array
-  return newStr
+  return wavy
+
 }
-console.log(wave("h ello"))
+console.log(wave("h ello")) //["H ello", "h Ello", "h eLlo", "h elLo", "h ellO"]
 
 
 
