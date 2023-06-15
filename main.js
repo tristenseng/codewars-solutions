@@ -3,6 +3,15 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - beginner - reduce but grow
+param - array of integers
+return - integers multiplied
+*/
+function grow(x){
+  return x.reduce((accum, n) => accum*n, 1)
+}
+
+/*
 8 - sum of positive
 param - arr of numbers
 return - sum of positive integers
