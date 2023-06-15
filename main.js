@@ -1,6 +1,26 @@
 /*
 KYU RANK - CHALLENGE NAME
 */
+
+
+/*
+7 - square every digit
+param - number
+return - every digit squared then concatenated
+*/
+function squareDigits(num){
+  //num to array
+  num = Array.from(String(num))
+  //map function to square each element
+  let numArr = num.map(n => Math.pow(Number(n),2))
+  
+  //return Number
+  return Number(numArr.join(""))
+  
+}
+
+
+
 /*
 8 - whats the real floor
 param - int
@@ -17,6 +37,10 @@ function getRealFloor(n) {
     return n-2
   }
 }
+
+
+
+
 /*
 8 - Drink about
 param - integer
