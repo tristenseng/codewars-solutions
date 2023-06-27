@@ -1,6 +1,28 @@
 /*
 KYU RANK - CHALLENGE NAME
 */
+
+/*
+8 - Drink about
+param - integer
+return - string depending on conditinos
+*/
+function peopleWithAgeDrink(age) {
+  if (age > 20) {
+    return "drink whisky"
+  }
+  else if (age < 14) {
+    return "drink toddy"
+  }
+  else if (age < 18) {
+    return "drink coke"
+  }
+  else {
+    return "drink beer"
+  }
+}
+console.log(peopleWithAgeDrink(22)) //'drink whisky'
+
 /*
 8 - Counting sheep...
 param - array of boolean values
