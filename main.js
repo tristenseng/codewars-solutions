@@ -1,7 +1,22 @@
 /*
 KYU RANK - CHALLENGE NAME
 */
-
+/*
+8 - whats the real floor
+param - int
+return the real floor
+*/
+function getRealFloor(n) {
+  if (n < 1) {
+    return n
+  }
+  else if (n < 13) {
+    return n-1
+  }
+  else {
+    return n-2
+  }
+}
 /*
 8 - Drink about
 param - integer
@@ -50,6 +65,8 @@ var array1 = [true,  true,  true,  false,
   false, false, true,  true ]
 // console.log(countSheeps(array1)) //17
 
+
+
 /*
 7 - Simple Fun #176: Reverse Letter
 param - string
@@ -71,6 +88,8 @@ function reverseLetter(str) {
   
   
 }
+
+
 
 
 /*
@@ -134,7 +153,7 @@ function wave(str){
   return wavy
 
 }
-console.log(wave("h ello")) //["H ello", "h Ello", "h eLlo", "h elLo", "h ellO"]
+//console.log(wave("h ello")) //["H ello", "h Ello", "h eLlo", "h elLo", "h ellO"]
 
 
 
@@ -176,6 +195,8 @@ function nbDig(n, d) {
   }
   return count
 }
+
+
 //console.log(nbDig(10,0))//0,1,2,3,4,5,6,7,8,9,10
 //0,1,4,9,16,25,36,49,64,81,100
 //2
@@ -221,6 +242,9 @@ function switchItUp(number){
         break;
   }
 }
+
+
+
 
 /*
 5 - job matching #3
