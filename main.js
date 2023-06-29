@@ -2,6 +2,23 @@
 KYU RANK - CHALLENGE NAME
 */
 
+/*
+8 - sum of positive
+param - arr of numbers
+return - sum of positive integers
+*/
+function positiveSum(arr) {
+  let count = 0
+  //iterate through array
+  for (let num of arr) {
+    //if positive number
+    if (num > 0) {
+      count += num
+    }
+  }
+  return count
+}
+
 
 /*
 7 - square every digit
