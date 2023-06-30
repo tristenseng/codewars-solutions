@@ -3,6 +3,19 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+7 - sum of two lowest positive integers
+param - numbers array
+return - sum of two smallest numbers
+*/
+function sumTwoSmallestNumbers(numbers) {
+  let lowestNum = Math.min(...numbers)
+  let lowestIndex = numbers.indexOf(lowestNum)
+  numbers.splice(lowestIndex, 1)
+  let secondLowestNum = Math.min(...numbers)
+  return lowestNum + secondLowestNum
+}
+
+/*
 8 - beginner - reduce but grow
 param - array of integers
 return - integers multiplied
