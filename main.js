@@ -2,6 +2,28 @@
 KYU RANK - CHALLENGE NAME
 */
 
+/*
+  8 - total amount of points
+  param - array of string of match results formatted as "our team score:opponent score"
+  return - total score of our team
+*/
+function points(games) {
+  //iterate through array
+  //store scores into values
+  let count = 0
+  for (let i = 0; i < games.length; i++) {
+    let game = games[i]
+    let ourScore = Number(game[0])
+    let opponentScore = Number(game[2])
+    if (ourScore > opponentScore) {
+      count += 3
+    }
+    else if (ourScore == opponentScore) {
+      count += 1
+    }
+  }
+  return count
+}
 
 
 /*
