@@ -2,237 +2,7 @@
 KYU RANK - CHALLENGE NAME
 */
 
-/*
-7 - sum of two lowest positive integers
-param - numbers array
-return - sum of two smallest numbers
-*/
-function sumTwoSmallestNumbers(numbers) {
-  let lowestNum = Math.min(...numbers)
-  let lowestIndex = numbers.indexOf(lowestNum)
-  numbers.splice(lowestIndex, 1)
-  let secondLowestNum = Math.min(...numbers)
-  return lowestNum + secondLowestNum
-}
 
-/*
-8 - beginner - reduce but grow
-param - array of integers
-return - integers multiplied
-*/
-function grow(x){
-  return x.reduce((accum, n) => accum*n, 1)
-}
-
-/*
-8 - sum of positive
-param - arr of numbers
-return - sum of positive integers
-*/
-function positiveSum(arr) {
-  let count = 0
-  //iterate through array
-  for (let num of arr) {
-    //if positive number
-    if (num > 0) {
-      count += num
-    }
-  }
-  return count
-}
-
-
-/*
-7 - square every digit
-param - number
-return - every digit squared then concatenated
-*/
-function squareDigits(num){
-  //num to array
-  num = Array.from(String(num))
-  //map function to square each element
-  let numArr = num.map(n => Math.pow(Number(n),2))
-  
-  //return Number
-  return Number(numArr.join(""))
-  
-}
-
-
-
-/*
-8 - whats the real floor
-param - int
-return the real floor
-*/
-function getRealFloor(n) {
-  if (n < 1) {
-    return n
-  }
-  else if (n < 13) {
-    return n-1
-  }
-  else {
-    return n-2
-  }
-}
-
-
-
-
-/*
-8 - Drink about
-param - integer
-return - string depending on conditinos
-*/
-function peopleWithAgeDrink(age) {
-  if (age > 20) {
-    return "drink whisky"
-  }
-  else if (age < 14) {
-    return "drink toddy"
-  }
-  else if (age < 18) {
-    return "drink coke"
-  }
-  else {
-    return "drink beer"
-  }
-}
-// console.log(peopleWithAgeDrink(22)) //'drink whisky'
-
-/*
-8 - Counting sheep...
-param - array of boolean values
-return - how many values are true (how many sheep are there?)
-e - 
-*/
-function countSheeps(arrayOfSheep) {
-  //initialize counter
-  let counter = 0
-  //iterate through array
-  for (let val of arrayOfSheep) {
-    //if true +1
-    if (val == true) {
-      counter++
-    }
-  }
-  return counter
-
-}
-var array1 = [true,  true,  true,  false,
-  true,  true,  true,  true ,
-  true,  false, true,  false,
-  true,  false, false, true ,
-  true,  true,  true,  true ,
-  false, false, true,  true ]
-// console.log(countSheeps(array1)) //17
-
-
-
-/*
-7 - Simple Fun #176: Reverse Letter
-param - string
-return - string reversed and omit all non-alphabetic characters
-
-*/
-function reverseLetter(str) {
-  str = str.split("")
-  let newStr = []
-  let reversedStr = []
-  for (let i = 0; i < str.length; i++) {
-    //if it is a letter
-    if (str[i].toUpperCase() != str[i].toLowerCase()) {
-      newStr.push(str[i])
-    }
-  }
-  
-  return newStr.reverse().join("")
-  
-  
-}
-
-
-
-
-/*
-8 - Opposites Attractg
-param - two parameters both integers
-return true if one even and one odd
-return false if else
-*/
-function lovefunc(flower1, flower2){
-  if ((flower1 % 2 == 0 && flower2 % 2 == 1) || flower1 % 2 == 1 && flower2 % 2 == 0) {
-    return true
-  }
-  else {
-    return false
-  }
-}
-
-/*
-8 - Lario and Muigi Pipe Problem
-param - array of numbers in ascending order
-return fixed list so that values increment by 1 from min to max value
-*/
-
-function pipeFix(numbers){
-  //store min/max value
-  //for loop from min to max
-  //push val to some array
-  let min = Math.min(...numbers)
-  let max = Math.max(...numbers)
-  let fixedList = []
-  for (let i = min; i <= max; i++) {
-    fixedList.push(i)
-  }
-  return fixedList
-}
-
-/*
-6 - Mexican Wave
-param - a lowercase string
-return - an array of the same string where each iteration of the string has a 
-single capital letter starting from the first letter to the last
-
-*/
-function wave(str){
-  //initialize wavy array
-  let wavy = []
-  //arg string to array
-  str = Array.from(str)
-
-  //iterate through length of string
-  for (let i = 0; i < str.length; i++) {
-    //copies array (pass by value kinda)
-    let temp = str.slice(0)
-
-    //if to capitalize the ith character
-    if (temp[i] != " ") { 
-      temp[i] = temp[i].toUpperCase()
-      wavy.push(temp.join(""))
-    }
-  }
-  return wavy
-
-}
-//console.log(wave("h ello")) //["H ello", "h Ello", "h eLlo", "h elLo", "h ellO"]
-
-
-
-
-/*
-7 - You're a square!
-param - an integer
-return - return true if its a perfect square
-*/
-var isSquare = function(n){
-  let num = Math.sqrt(n)
-  if (Math.floor(num) == Math.ceil(num)) {
-    return true
-  }
-  return false
-}
 
 /*
 7 - count the digit
@@ -258,9 +28,7 @@ function nbDig(n, d) {
   }
   return count
 }
-
-
-//console.log(nbDig(10,0))//0,1,2,3,4,5,6,7,8,9,10
+// console.log(nbDig(10,0))//0,1,2,3,4,5,6,7,8,9,10
 //0,1,4,9,16,25,36,49,64,81,100
 //2
 /*
@@ -306,41 +74,38 @@ function switchItUp(number){
   }
 }
 
-
-
-
 /*
 5 - job matching #3
 param - candidate and job objects
 return boolean if candidate fits job
 */
-// function match(candidate, job) { 
+function match(candidate, job) { 
   
-//   //iterate through job skills
-//   //compare values between both candidate and job
-//   //multiply experience by desired preference
-//   //compare skills
-//   //compare years
-//   //return false if not
-//   //if true
-//   if (candidate.skills.length < job.skills.length) {
-//     return false
-//   }
-//   else {
-//     for (let j of job) {
+  //iterate through job skills
+  //compare values between both candidate and job
+  //multiply experience by desired preference
+  //compare skills
+  //compare years
+  //return false if not
+  //if true
+  if (candidate.skills.length < job.skills.length) {
+    return false
+  }
+  else {
+    for (let j of job) {
 
-//     }
-//   }
+    }
+  }
 
-// }
+}
 
 
-// let candidate = {
-//   skills: [{ name: 'CoffeeScript', experience: 3, preference: 'neutral' }]
-// }
-// let job = { 
-//   skills: [{ name: 'CoffeeScript', idealYears: 3, substitutions: [{ name: 'JavaScript' }] }]
-// }
+let candidate = {
+  skills: [{ name: 'CoffeeScript', experience: 3, preference: 'neutral' }]
+}
+let job = { 
+  skills: [{ name: 'CoffeeScript', idealYears: 3, substitutions: [{ name: 'JavaScript' }] }]
+}
 
 // console.log(match(candidate, job)) //true
 /*
