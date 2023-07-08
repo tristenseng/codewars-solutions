@@ -2,6 +2,23 @@
 KYU RANK - CHALLENGE NAME
 */
 
+
+
+/*
+8 - grasshopper check for factor
+param - base integer and factor integer
+return - boolean value if factor is indeed a factor of the base value
+*/
+function checkForFactor (base, factor) {
+  if (base % factor == 0) {
+    return true
+  }
+  return false
+}
+
+
+
+
 /*
   8 - total amount of points
   param - array of string of match results formatted as "our team score:opponent score"
