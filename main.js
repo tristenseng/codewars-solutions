@@ -2,7 +2,20 @@
 KYU RANK - CHALLENGE NAME
 */
 
+/*
+8 - is he gonna survive?
+param - amount of bullets given and dragons that are going to be fought
+return - boolean value true if we can survive the dragon attack!
+1 dragon = 2 bullets
+*/
 
+function hero(bullets, dragons){
+  let survivalRate = bullets/dragons.toFixed(3)
+  if (survivalRate >= 2) {
+    return true
+  }
+  return false
+}
 
 /*
 8 - grasshopper check for factor
