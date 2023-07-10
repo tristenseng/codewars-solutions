@@ -3,6 +3,15 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - third angle of a triangle
+param - two integer values representing interior angles of a triangle (in degrees)
+return - the third interior angle of the triangle 
+*/
+function otherAngle(a, b) {
+  return 180 - a - b;
+}
+
+/*
 8 - is he gonna survive?
 param - amount of bullets given and dragons that are going to be fought
 return - boolean value true if we can survive the dragon attack!
