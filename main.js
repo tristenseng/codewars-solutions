@@ -3,6 +3,17 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - sum the strings
+param - 2 integers
+return - sum as a string
+*/
+function sumStr(a,b) {
+  a = Number(a)
+  b = Number(b)
+  return String(a+b)
+}
+
+/*
 8 - third angle of a triangle
 param - two integer values representing interior angles of a triangle (in degrees)
 return - the third interior angle of the triangle 
