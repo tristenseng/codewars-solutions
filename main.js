@@ -3,6 +3,31 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+7 - check the exam
+param - array of correct answers, array of submitted answers
+return - score of student 
+*/
+
+function checkExam(correct, submitted) {
+  let score = 0;
+  //filter through answers comparing them against correct array
+  for (let i in correct) {
+    if (correct[i] == submitted[i]) {
+      score += 4
+    }
+    else if (submitted[i] != "") {
+      score -= 1
+    }
+  }
+  
+  return (score > 0 ? score : 0)
+}
+
+
+
+
+
+/*
 8 - sum the strings
 param - 2 integers
 return - sum as a string
@@ -12,6 +37,9 @@ function sumStr(a,b) {
   b = Number(b)
   return String(a+b)
 }
+
+
+
 
 /*
 8 - third angle of a triangle
