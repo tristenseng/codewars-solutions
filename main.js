@@ -3,6 +3,16 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - parse nice int from char problem
+param - string `${x} years old`
+return - integer x
+*/
+function getAge(inputString){
+  let str = Array.from(inputString)
+  return Number(str[0])
+}
+
+/*
 7 - check the exam
 param - array of correct answers, array of submitted answers
 return - score of student 
