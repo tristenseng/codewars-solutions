@@ -3,6 +3,32 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+7 - disemvowel trolls
+param - string
+return - string with vowels removed
+*/
+
+function disemvowel(str) {
+  str = Array.from(str)
+  let vowels = ['a', 'e', 'i', 'o', 'u']
+  return str.filter((ch,i) => !vowels.includes(ch.toLowerCase())).join("")
+
+}
+
+
+/*
+8 - messi goals
+no param
+return - totalGoals
+*/
+
+var laLigaGoals = 43;
+var championsLeagueGoals = 10;
+var copaDelReyGoals = 5;
+
+var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals;
+
+/*
 8 - parse nice int from char problem
 param - string `${x} years old`
 return - integer x
