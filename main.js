@@ -2,6 +2,23 @@
 KYU RANK - CHALLENGE NAME
 */
 
+
+/*
+7 - find the stray number
+param - integer array w an odd-numbered length
+return - return the single number that is different in the array
+*/
+function stray(numbers) {
+  numbers.sort()
+  if(numbers[1] == numbers[2]) {
+    return numbers[0]
+  }
+  else {
+    return numbers[numbers.length-1]
+  }
+}
+
+
 /*
 8 - plural
 param - integer
