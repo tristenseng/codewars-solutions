@@ -9,13 +9,12 @@ param - integer array w an odd-numbered length
 return - return the single number that is different in the array
 */
 function stray(numbers) {
-  numbers.sort()
-  if(numbers[1] == numbers[2]) {
-    return numbers[0]
+  numbers.sort((a,b) => a-b)
+  //if last values are not equal then reverse
+  if (numbers[numbers.length-1] != numbers[numbers.length-2]) {
+    numbers.reverse()
   }
-  else {
-    return numbers[numbers.length-1]
-  }
+  return numbers[0]
 }
 
 
