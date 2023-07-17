@@ -3,6 +3,20 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - plural
+param - integer
+return - boolean value false if value is 1
+*/
+
+function plural(n) {
+  if (n == 1) {
+    return false
+  }
+  return true
+}
+
+
+/*
 7 - disemvowel trolls
 param - string
 return - string with vowels removed
