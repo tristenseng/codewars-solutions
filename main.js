@@ -3,6 +3,25 @@ KYU RANK - CHALLENGE NAME
 */
 
 
+
+/*
+6 - find the unique number
+param - array of integers
+return - all numbers are equal except one. return the unique integer
+*/
+function findUniq(arr) {
+  //sort array
+  arr.sort((a,b) => a-b)
+  //single integer is going to be either first or last element
+  if (arr[0] == arr[1]) {
+    arr.reverse()
+  }
+  return arr[0]
+}
+
+
+
+
 /*
 7 - find the stray number
 param - integer array w an odd-numbered length
