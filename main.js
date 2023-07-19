@@ -2,6 +2,27 @@
 KYU RANK - CHALLENGE NAME
 */
 
+/*
+8 - replace all vowel to exclamations
+param - string
+return - string with vowels replaced with exclamations
+*/
+function replace(s){
+  //iterate through array
+  //search for vowels
+  //replace vowels
+  //return
+  s = Array.from(s)
+  let vowels = ['a', 'e', 'i', 'o', 'u']
+  for (let i in s) {
+    let ch = s[i].toLowerCase() 
+    if (vowels.includes(ch)) {
+      s.splice(i, 1, "!")
+    }
+  }
+  return s.join("")
+}
+
 
 
 /*
