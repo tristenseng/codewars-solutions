@@ -3,6 +3,42 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+7 - two fighters, one winner
+param - two fighter objects, the first attacker
+return - fighter object name attribute
+*/
+
+
+function declareWinner(fighter1, fighter2, firstAttacker) {
+  let first;
+  let second;
+  if (firstAttacker == fighter1.name) {
+    first = fighter1
+    second = fighter2
+  }
+  else {
+    first = fighter2
+    second = fighter1
+  }
+  
+  while (fighter1.health > 0 && fighter2.health > 0) {
+    second.health = second.health - first.damagePerAttack
+    console.log(second.health)  
+    let temp = first
+    first = second
+    second = temp
+  }
+  
+  if (first == fighter1.name) {
+    return fighter2.name
+  }
+  else {
+    return fighter1.name
+  }
+    
+}
+
+/*
 8 - replace all vowel to exclamations
 param - string
 return - string with vowels replaced with exclamations
