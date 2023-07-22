@@ -3,6 +3,21 @@ KYU RANK - CHALLENGE NAME
 */
 
 
+/*
+8 - add length
+param - a string with words space-separated
+return - array of each word space-separated by its length
+*/
+function addLength(str) {
+  //split string
+  str = str.split(" ")
+  //count length of each element
+  str = str.map(s => s.concat(` ${s.length}`))
+  //add that length to its respective string element
+  //return
+  return str
+}
+
 
 /*
 6 - give me a diamond
