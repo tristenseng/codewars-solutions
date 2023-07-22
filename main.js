@@ -2,6 +2,8 @@
 KYU RANK - CHALLENGE NAME
 */
 
+
+
 /*
 6 - give me a diamond
 param - an integer representing the 'size' of a diamond
@@ -18,18 +20,19 @@ function diamond(n){
   let topLayer = Math.ceil(n/2)
   //for loop to create layers
   for (let i = 0; i < topLayer; i++) {
-    let spaceFill = Array(topLayer-i).fill(" ").join("")
+    let spaceFill = Array(topLayer-i-1).fill(" ").join("")
     let diamondFill = Array(2*i+1).fill("*").join("")
     let layer = `${spaceFill}${diamondFill}\n`
-    diamond.splice(i, 1, layer)
+    diamond.splice(i, 0, layer)
     //if we are not at the middle layer
     if (i != topLayer-1) {
-      diamond.splice(topLayer-i-1, 1, layer)
+      diamond.splice(n-i-1, 0, layer)
     }
 
   }
   return diamond.join("")
 }
+console.log(diamond(11))
 
 /*
 7 - two fighters, one winner
