@@ -4,6 +4,25 @@ KYU RANK - CHALLENGE NAME
 
 
 /*
+6 - two sum
+param - array of integers and a target number
+return - return an array of two element values whos corresponding integer value would sum to the target number
+*/
+function twoSum(numbers, target) {
+  //iterate through numbers array
+  
+  for (let i in numbers) {
+    for (let j in numbers) {
+      if (i != j) {
+        if (numbers[i] + numbers[j] == target) {
+          return [Number(i), Number(j)]
+        }
+      }
+    }
+  }
+}
+
+/*
 8 - add length
 param - a string with words space-separated
 return - array of each word space-separated by its length
