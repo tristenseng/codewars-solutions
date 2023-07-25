@@ -3,6 +3,17 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+7 - small enough
+param - array of integers, an limit value given as integer
+return - if all values in array are <= the limit value
+*/
+function smallEnough(a, limit){
+  //every method
+  let result = a.every(value => value <= limit)
+  return result
+}
+
+/*
 7 - #3 sum of numbers
 param - two integers
 return - the sum of all integers between them and including them
