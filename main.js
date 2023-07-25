@@ -2,6 +2,29 @@
 KYU RANK - CHALLENGE NAME
 */
 
+/*
+7 - #3 sum of numbers
+param - two integers
+return - the sum of all integers between them and including them
+*/
+function getSum(a, b)
+{
+  //edgecases
+  if (a==b) {
+    return a
+  }
+  else if (a > b) {
+    let temp = a
+    a = b
+    b = temp
+  }
+  let sum = 0
+  for (let i = a; i <= b; i++) {
+    sum += i
+  }
+  return sum
+}
+
 
 /*
 6 - two sum
