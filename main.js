@@ -3,6 +3,16 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - terminal game combat function
+param - a players health and amount of damage recieved
+return - the new health - recieved damage
+*/
+function combat(health, damage) {
+  health -= damage
+  return health >= 0 ? health : 0
+}
+
+/*
 7 - small enough
 param - array of integers, an limit value given as integer
 return - if all values in array are <= the limit value
