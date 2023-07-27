@@ -3,6 +3,30 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+7 - alternate capitalization
+param - a string
+return - array of two strings
+capitalize even-indexed on first 
+capitalize odd-indexed on second
+*/
+function capitalize(s){
+  s = Array.from(s)
+  let first = [];
+  let second = [];
+  for (let i = 0; i < s.length; i+=2) {
+    first.push(s[i].toUpperCase())
+    second.push(s[i])
+    if (s[i+1]) {
+      first.push(s[i+1])
+      second.push(s[i+1].toUpperCase())
+    }
+  }
+
+  return [first.join(""), second.join("")]
+
+};
+
+/*
 8 - terminal game combat function
 param - a players health and amount of damage recieved
 return - the new health - recieved damage
