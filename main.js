@@ -3,6 +3,17 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - how many lightsabers
+param - name of programmer
+return - number of lightsabers owned by that person
+hint...zach owns 18 and hes the only one who owns lightsabers
+*/
+function howManyLightsabersDoYouOwn(name) {
+  if (name) name = name.toLowerCase()
+  return name != 'zach' ? 0 : 18
+}
+
+/*
 7 - alternate capitalization
 param - a string
 return - array of two strings
