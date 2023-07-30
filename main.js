@@ -3,6 +3,33 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - feast of many beasts
+param - two strings, a beast brings a dish to the feast
+the best and the dish must start with the same letter
+return - true if so
+*/
+function feast(beast, dish) {
+  beast = Array.from(beast)
+  dish = Array.from(dish)
+  return beast[0] == dish[0] && beast[beast.length-1] == dish[dish.length-1] ? true : false
+}
+
+/*
+6 - count the smiley faces
+param - array of strings (potential smiley faces)
+return the total number of smiling faces in the array
+*/
+
+function countSmileys(arr) {
+  //array of valid smiles
+  let validSmiley = [":)", ":D", ":-)", ":-D", ":~)", ":~D", ";)", ";D", ";-)", ";-D", ";~)", ";~D"]
+  //filter through argument arr and find valid smiles
+  let validArr = arr.filter(x => validSmiley.includes(x))
+  //return valid length
+  return validArr.length
+}
+
+/*
 8 - how many lightsabers
 param - name of programmer
 return - number of lightsabers owned by that person
