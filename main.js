@@ -3,6 +3,25 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+6 - tribonacci sequence
+param - an array of integers length 3,
+return - the first n elements
+each consecutive number after the first 3 is the sum of the previous 3 numbers
+*/
+function tribonacci(signature,n){
+  if (n < 3) return signature.slice(0, n)
+  //iterate through signature array n times
+  for (let i = 0; i < n-3; i++) {
+    //do thing that allows to add previous 3 numbers then add that to end of array
+    let tempArr = signature.slice(i, i+3)
+    let tempSum = tempArr.reduce((acc, val) => val+acc, 0)
+    signature.push(tempSum)
+  }
+
+  return signature
+}
+
+/*
 8 - feast of many beasts
 param - two strings, a beast brings a dish to the feast
 the best and the dish must start with the same letter
