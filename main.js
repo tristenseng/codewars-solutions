@@ -3,6 +3,17 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - find smallest integer
+param - array of integers
+return - smallest integer
+*/
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return Math.min(...args)  
+  }
+}
+
+/*
 6 - tribonacci sequence
 param - an array of integers length 3,
 return - the first n elements
