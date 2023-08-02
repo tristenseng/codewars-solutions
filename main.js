@@ -3,6 +3,15 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - frog
+param - an animal!
+return - boolean val
+*/
+function mouthSize(animal) {
+  return animal.toLowerCase() == "alligator" ? "small" : "wide"
+}
+
+/*
 8 - find smallest integer
 param - array of integers
 return - smallest integer
