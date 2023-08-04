@@ -3,6 +3,15 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - sum mixed array
+param - array of integers as strings and numbers
+return - sum all values of array as if they were integers
+*/
+function sumMix(x){
+  return x.reduce((acc, num) => Number(num) + acc, 0)
+}
+
+/*
 8 - frog
 param - an animal!
 return - boolean val
