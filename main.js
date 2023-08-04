@@ -3,6 +3,19 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - duty free
+param - normal price of whiskey, discount percentage, holiday price
+return - how many bottle would you have to buy in order for the savings to cover the cost of holiday trip
+*/
+function dutyFree(normPrice, discount, hol){
+  discount = discount/100
+  const newPrice = normPrice - (normPrice*discount)
+  const diff = normPrice - newPrice
+  const result = Math.floor(hol/diff)
+  return result
+}
+
+/*
 8 - sum mixed array
 param - array of integers as strings and numbers
 return - sum all values of array as if they were integers
