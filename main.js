@@ -3,6 +3,31 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+7 - fix string case
+param - string of uppercase and lowercase letters
+return - converted string to either all lowercase or all uppercase based on making as few changes as possible
+if strings contains equal number of upper and lower, convert to lower
+*/
+function solve(s){
+  s = Array.from(s)
+  let upper = 0
+  let lower = 0
+  for (let i in s) {
+    if (s[i] == s[i].toUpperCase()) {
+      upper++
+    }
+    else {
+      lower++
+    }
+  }
+  s = s.join("")
+  if (upper > lower) {
+    return s.toUpperCase()
+  }
+  return s.toLowerCase()
+}
+
+/*
 8 - duty free
 param - normal price of whiskey, discount percentage, holiday price
 return - how many bottle would you have to buy in order for the savings to cover the cost of holiday trip
