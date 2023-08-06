@@ -3,6 +3,19 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+7 - sum of a sequence
+param - 3 non-negative integers
+return - the total sum of a sequence of integers 
+*/
+const sequenceSum = (begin, end, step) => {
+  let count = 0
+  for (let i = begin; i <= end; i+=step) {
+    count += i
+  }
+  return count
+};
+
+/*
 7 - fix string case
 param - string of uppercase and lowercase letters
 return - converted string to either all lowercase or all uppercase based on making as few changes as possible
