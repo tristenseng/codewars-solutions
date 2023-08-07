@@ -3,6 +3,19 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+7 - sum of minimum
+param - 2d array
+return - sum up minimum values from each array
+*/
+function sumOfMinimums(arr) {
+  let count = 0
+  for (let ar of arr) {
+    count += Math.min(...ar)
+  }
+  return count
+}
+
+/*
 7 - sum of a sequence
 param - 3 non-negative integers
 return - the total sum of a sequence of integers 
