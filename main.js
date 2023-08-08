@@ -3,6 +3,25 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+6 - break camelCase
+param - string
+return - add a space before the capital letter
+*/
+function solution(string) {
+  string = Array.from(string)
+  
+  string = string.map(function(letter) {
+    if(letter == letter.toUpperCase()) {
+      letter = " " + letter
+    }
+    return letter
+  })
+  
+  return string.join("").replaceAll(",","")
+}
+
+
+/*
 7 - sum of minimum
 param - 2d array
 return - sum up minimum values from each array
