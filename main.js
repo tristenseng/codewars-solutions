@@ -3,6 +3,15 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - is it even
+param - integer
+return true if even
+*/
+function testEven(n) {
+  return n % 2 == 0 ? true : false
+}
+
+/*
 6 - break camelCase
 param - string
 return - add a space before the capital letter
