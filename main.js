@@ -3,6 +3,15 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - opposite number
+param - integer
+return its opposite
+*/
+function opposite(number) {
+  return -1 * number
+}
+
+/*
 8 - is it even
 param - integer
 return true if even
