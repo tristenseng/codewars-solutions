@@ -3,6 +3,17 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+7 - form the minimum
+param - list of integers
+return the smallest number that could be formed from the digits
+*/
+function minValue(values){
+  values = new Set(values)
+  let result = [...values].sort((a,b) => a-b)
+  return Number(result.join(""))
+}
+
+/*
 8 - opposite number
 param - integer
 return its opposite
