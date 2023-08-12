@@ -3,6 +3,19 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+7 - round up to next multiple of 5
+param - integer
+return - the nearest multiple of 5 that is greater/equal to n
+*/
+function roundToNext5(n){
+  while (n%5 != 0) {
+    n++
+  }
+  return n
+  
+}
+
+/*
 7 - form the minimum
 param - list of integers
 return the smallest number that could be formed from the digits
