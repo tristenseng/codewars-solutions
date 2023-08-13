@@ -2,6 +2,15 @@
 KYU RANK - CHALLENGE NAME
 */
 
+function twoSort(s) {
+  s = s.sort()
+  let temp = s[0].split("")
+  temp = temp.map((ch) => {
+    return temp.indexOf(ch) != temp.length-1 ? ch + "***" : ch
+  })
+  return temp.join("")
+}
+
 /*
 7 - round up to next multiple of 5
 param - integer
