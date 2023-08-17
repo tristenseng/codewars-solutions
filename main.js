@@ -1,4 +1,14 @@
 /*
+8 - boolean values to string yes or no
+param boolean
+return string 
+*/
+function boolToWord( bool ){
+  return bool ? "Yes" : "No"
+}
+
+
+/*
 KYU RANK - CHALLENGE NAME
 */
 
