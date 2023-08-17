@@ -1,4 +1,19 @@
 /*
+8 - sum of differences in array
+param - arr of integers
+return sum of differences between consecutive pairs
+*/
+function sumOfDifferences(arr) {
+  arr = arr.sort((a,b) => b-a)
+  let differences = []
+  for (let i = 0; i < arr.length-1; i++) {
+    let temp = arr[i] - arr[i+1]
+    differences.push(temp)
+  }
+  return differences.reduce((accum, num) => num+accum,0)
+}
+
+/*
 8 - boolean values to string yes or no
 param boolean
 return string 
