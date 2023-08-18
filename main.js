@@ -1,4 +1,19 @@
 /*
+7 - number of people in the bus
+param - array of arrays of integer pairs
+return - arrival - departure
+*/
+var number = function(busStops){
+  let arrival = 0
+  let departure = 0
+  for (let stop of busStops) {
+    arrival += stop[0]
+    departure += stop[1]
+  }
+  return arrival - departure
+}
+
+/*
 8 - sum of differences in array
 param - arr of integers
 return sum of differences between consecutive pairs
