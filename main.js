@@ -1,3 +1,27 @@
+
+/*
+KYU RANK - CHALLENGE NAME
+*/
+
+
+/*
+8 - what is between
+param - two integers a<b
+return all integers between a and b (inclusive)
+*/
+
+function between(a, b) {
+  let arr = []
+  for (i = a; i <= b; i++) { 
+      arr.push(i)
+  }
+  return arr
+}
+
+
+
+
+
 /*
 7 - number of people in the bus
 param - array of arrays of integer pairs
@@ -38,9 +62,6 @@ function boolToWord( bool ){
 }
 
 
-/*
-KYU RANK - CHALLENGE NAME
-*/
 
 function twoSort(s) {
   s = s.sort()
