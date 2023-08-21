@@ -5,6 +5,21 @@ KYU RANK - CHALLENGE NAME
 
 
 /*
+8 - find the first non-consecutive number 
+param - arr of integers
+return the first non consecutive number ; null if not
+*/
+function firstNonConsecutive (arr) {
+  let initial = arr[0]
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] + 1 != arr[i+1]) {
+      return arr[i+1]
+    }
+  }
+  return null
+}
+
+/*
 8 - what is between
 param - two integers a<b
 return all integers between a and b (inclusive)
