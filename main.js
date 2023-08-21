@@ -5,6 +5,15 @@ KYU RANK - CHALLENGE NAME
 
 
 /*
+8 - reverse list order
+param - array of integers
+return reversed array
+*/
+function reverseList(list) {
+  return list.reverse()
+}
+
+/*
 8 - find the first non-consecutive number 
 param - arr of integers
 return the first non consecutive number ; null if not
