@@ -3,6 +3,22 @@
 KYU RANK - CHALLENGE NAME
 */
 
+/*
+6 - write number in expanded form
+param - integer
+return - expanded integer
+ex - expandedForm(70304) == '70000 + 300 + 4'
+*/
+function expandedForm(num) {
+  //turn to array of string ch
+  num = Array.from(num.toString())
+  //map method to add zeroes to each int
+  num = num.map((n, i, arr) => n + "0".repeat(arr.length - 1 - i))
+  //remove n's == 0
+  num = num.filter(n => Number(n) != 0)
+  //return 'expanded form'
+  return num.join(" + ")
+}
 
 /*
 8 - reverse list order
