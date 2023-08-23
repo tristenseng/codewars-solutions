@@ -4,6 +4,30 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+6 - bouncing balls
+param - height (h) of ball being dropped ; (bounce) rate ; observer (window)
+return - how many times the observer from the iwndow sees that ball passing in front of window
+*/
+function bouncingBall(h,  bounce,  window) {
+  if (h < 0 || bounce >= 1 || bounce < 0 || window >= h) {
+    return -1
+  }
+  //represent h and bounce formula
+  let temp = h
+  //initial drop results in 1 time the observer sees the ball
+  let result = 1
+  while (temp > window) {
+    console.log(temp)
+    temp *= bounce
+    if (temp > window) {
+      result+=2
+    }
+
+  }
+  return result
+}
+
+/*
 6 - write number in expanded form
 param - integer
 return - expanded integer
