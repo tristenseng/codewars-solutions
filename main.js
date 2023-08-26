@@ -4,6 +4,26 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+7 - exes and ohs
+param - string
+return bool if string has same amount of x and o characters
+*/
+function XO(str) {
+  str = Array.from(str.toLowerCase())
+  let x = 0
+  let o = 0
+  for (let ch of str) {
+    if (ch == 'x') {
+      x++
+    }
+    else if (ch == 'o') {
+      o++
+    }
+  }
+  return x == o
+}
+
+/*
 6 - bouncing balls
 param - height (h) of ball being dropped ; (bounce) rate ; observer (window)
 return - how many times the observer from the iwndow sees that ball passing in front of window
