@@ -3,6 +3,11 @@
 KYU RANK - CHALLENGE NAME
 */
 
+//8 - remove duplicates from a list
+function distinct(a) {
+  return Array.from(new Set(a))
+}
+
 /*
 7 - exes and ohs
 param - string
