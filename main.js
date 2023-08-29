@@ -3,6 +3,20 @@
 KYU RANK - CHALLENGE NAME
 */
 
+/*
+7 - remove the minimum
+param - numbers array
+return - lowest indexed (if multiples), lowest value from array
+*/
+function removeSmallest(numbers) {
+  if (numbers == []) {
+    return []
+  }
+  return numbers.filter((val, i) => {
+    return i != numbers.indexOf(Math.min(...numbers))
+  })
+}
+
 //8 - remove duplicates from a list
 function distinct(a) {
   return Array.from(new Set(a))
