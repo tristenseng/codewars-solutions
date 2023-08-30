@@ -1,7 +1,20 @@
-
 /*
 KYU RANK - CHALLENGE NAME
 */
+
+/*
+7 - deodorant evaporator
+*/
+
+function evaporator(content, evap_per_day, threshold){ 
+  let days = 0
+  let gas = 100
+  while (gas >= threshold) {
+    days++
+    gas -= gas * (evap_per_day/100)
+  }
+  return days
+}
 
 /*
 7 - remove the minimum
