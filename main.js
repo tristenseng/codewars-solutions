@@ -3,6 +3,16 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+7 - descending order
+param - an integer
+return - integer in descending order
+*/
+function descendingOrder(n){
+  n = String(n).split("")
+  return Number(n.sort((a,b) => b-a).join(""))
+}
+
+/*
 7 - largest pair sum in array
 param - array of integer
 return sum of two largest ints
