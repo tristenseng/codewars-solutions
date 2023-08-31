@@ -3,6 +3,22 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+7 - largest pair sum in array
+param - array of integer
+return sum of two largest ints
+*/
+function largestPairSum (numbers) {
+  let max = Math.max(...numbers)
+  console.log(max)
+  let i = numbers.indexOf(max)
+  numbers.splice(i, 1)
+  console.log(numbers)
+  let max2 = Math.max(...numbers)
+  console.log(max2)
+  return max + max2
+}
+
+/*
 7 - deodorant evaporator
 */
 
