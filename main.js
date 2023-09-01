@@ -3,6 +3,16 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+8 - area of a square
+param - length of arc
+return area of square
+*/
+function squareArea(A){
+  let ans = (2*A)/Math.PI
+  return ans*ans
+}
+
+/*
 7 - descending order
 param - an integer
 return - integer in descending order
