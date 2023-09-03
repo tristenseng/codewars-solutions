@@ -12,23 +12,26 @@ function isValidWalk(walk) {
   // e w are opposites
   //directions are a map
   //traverse walk array
-  let walkMap = {}
+  let walkMap = {'n': 0, 's': 0, 'w': 0, 'e': 0}
   let minute = 0
-  for (let d of walk) {
-    while(minute < 10) {
-      if (walkMap.hasOwnProperty(prop)) {
+    for (let d of walk) {
+      if (walkMap.hasOwnProperty(d)) {
         walkMap[d] += 1
       }
       else {
         walkMap[d] = 1
       }
       minute++
-    }
-
+    } 
+  if (walkMap['n'] == walkMap['s'] && walkMap['e'] == walkMap['w'] && minute == 10) {
+    console.log(minute)
+    return true
   }
-  
-  
+  else {
+    return false
+  }
 }
+
 
 /*
 8 - area of a square
