@@ -3,6 +3,34 @@ KYU RANK - CHALLENGE NAME
 */
 
 /*
+take a ten minute walk
+param - array of ch's representing directions of walking
+return true if return back to main starting point at exactly ten minutes
+*/
+function isValidWalk(walk) {
+  // n s are opposites
+  // e w are opposites
+  //directions are a map
+  //traverse walk array
+  let walkMap = {}
+  let minute = 0
+  for (let d of walk) {
+    while(minute < 10) {
+      if (walkMap.hasOwnProperty(prop)) {
+        walkMap[d] += 1
+      }
+      else {
+        walkMap[d] = 1
+      }
+      minute++
+    }
+
+  }
+  
+  
+}
+
+/*
 8 - area of a square
 param - length of arc
 return area of square
