@@ -9,6 +9,18 @@ param - arr of integers
 return - filter of elements that are multiples of their own index
 */
 function multipleOfIndex(array) {
+  console.log(0%0)
+  array = array.filter((el, i) => el % i == 0 || (i==0 && el==0))
+  return array
+}
+
+
+/*
+8 - multiple of index
+param - arr of integers
+return - filter of elements that are multiples of their own index
+*/
+function multipleOfIndex(array) {
   return array.filter((el, i) => el % i == 0)
 }
 
