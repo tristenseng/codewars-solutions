@@ -2,6 +2,16 @@
 KYU RANK - CHALLENGE NAME
 */
 
+
+/*
+8 - multiple of index
+param - arr of integers
+return - filter of elements that are multiples of their own index
+*/
+function multipleOfIndex(array) {
+  return array.filter((el, i) => el % i == 0)
+}
+
 function rainAmount(mm){
   if (mm < 40)
     return "You need to give your plant " + (40 - mm) + "mm of water"
