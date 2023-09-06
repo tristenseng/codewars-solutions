@@ -2,6 +2,26 @@
 KYU RANK - CHALLENGE NAME
 */
 
+/*
+6 - delete occurrences of an element if it occurs more than n times
+param - array of integers , n - max amount of times an integer can appear
+return - array of integers with occurrences > n deleted
+*/
+function deleteNth(arr,n){
+  //dictionary with integers counted
+  let dict = {}
+  //values > n should be deleted
+  for (let i = 0; i < arr.length; i++) {
+    if(dict.hasOwnProperty(arr[i])) {
+      dict[arr[i]] += 1
+    }
+    else {
+      dict[arr[i]] = 1
+    }
+  }
+  console.log(dict.length)
+  
+}
 
 /*
 8 - multiple of index
