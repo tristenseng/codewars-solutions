@@ -3,6 +3,19 @@ DIFFICULTY - CHALLENGE NAME
 */
 
 /**
+ * 26 - remove duplicates from sorted array
+ * @param {number[]} nums
+ * @return {number}
+ * return how many duplicates were removed
+ */
+var removeDuplicates = function(nums) {
+  for (let i in nums) {
+
+  }
+  
+};
+
+/**
  * @param {number} x
  * @return {boolean}
  */
